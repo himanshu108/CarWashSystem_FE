@@ -1,39 +1,81 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+
+
+
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
   text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-.App-header {
-  min-height: 100vh;
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+  background-color: #f1f1f1;
+  padding: 20px;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+/* Main column */
+.main {   
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+  background-color: white;
+  padding: 20px;
+}
+
+/*  image, just for this example */
+.img {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 5px;
+  background: black;
+  color: white;
 }
