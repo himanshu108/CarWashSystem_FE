@@ -1,10 +1,12 @@
 .footer {
   position: fixed;
-  bottom: 0;
+  left: 0px;
+  bottom: 0px;
   width: 100%;
-  background-color: aliceblue;
+  height: 40px;
+  background-color: rgb(98, 127, 153);
 }
 
-h5 {
-  color: black;
+h6 {
+  color: rgb(255, 255, 255);
 }

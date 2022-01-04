@@ -1,43 +1,75 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import "./CustNav.css";
+import {NavLink} from "react-router-dom";
 
 function CustNavbar()  {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setShow(true);
+      } else setShow(false);
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {
+        console.log("");
+      });
+    };
+  }, []);
+
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark  bg-dark `}>
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          {props.title}
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+    <nav className={`nav ${show && "nav__scroll"}`}>
+      <a href="/">
+        <img
+          className="nav__logo"
+          src="carwashlogo.png"
+          alt="CAR WASH LOGO"
+        />
+      </a>
+      <div
+        className={`nav__container nav__borderXwidth ${
+          show && "nav__containerscroll nav__borderXwidthscroll"
+        }`}
+      >
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/"
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className={"nav-link active"} aria-current="page" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className={"nav-link active"} to="/">
-                Register As A Washer
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className={"nav-link active"} to="/">
-                Login/Sign Up
-              </Link>
-            </li>
-          </ul>
-        </div>
+          HOME
+        </NavLink>
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/orderpage"
+        >
+          PLACE YOUR ORDER
+        </NavLink>
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/whyus"
+        >
+          WHY US?
+        </NavLink>
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/working"
+        >
+          HOW IT WORKS
+        </NavLink>
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/contact"
+        >
+          CONTACT US
+        </NavLink>
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/login"
+        >
+          LOGOUT
+        </NavLink>
+
+        
       </div>
     </nav>
   );

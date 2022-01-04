@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-copyright text-center py-3">
-        <h5>
-          &copy; {new Date().getFullYear()} Copyright: By Anil Singh
-        </h5>
+        <h6>
+          &copy; {new Date().getFullYear()} Copyright: Made By HIMANSHU
+        </h6>
       </div>
     </div>
   );

@@ -29,15 +29,15 @@ function Working() {
     <div className="container">
       <h1>How it Works?</h1>
 
-      <Timeline align="alternate">
+      <Timeline  align="alternate">
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot color="primary" variant="outlined">
-              <DriveEtaIcon />
+              <DriveEtaIcon  className="work1"/>
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>
+          <TimelineContent className="work">
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
                 Select Your Car
@@ -50,11 +50,11 @@ function Working() {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot color="primary">
-              <SettingsIcon />
+              <SettingsIcon className="work1" />
             </TimelineDot>
             <TimelineConnector className={classes.secondaryTail} />
           </TimelineSeparator>
-          <TimelineContent>
+          <TimelineContent className="work">
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
                 Select The Perfect CarWash Service
@@ -67,11 +67,11 @@ function Working() {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot color="primary" variant="outlined">
-              <AttachMoneyIcon />
+              <AttachMoneyIcon className="work1" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>
+          <TimelineContent className="work">
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
                 Get A Reasonable Quote
@@ -86,11 +86,11 @@ function Working() {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot color="primary">
-              <BookmarksIcon />
+              <BookmarksIcon className="work1" />
             </TimelineDot>
             <TimelineConnector className={classes.secondaryTail} />
           </TimelineSeparator>
-          <TimelineContent>
+          <TimelineContent className="work">
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
                 Book An Appointment
@@ -105,11 +105,11 @@ function Working() {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot color="primary" variant="outlined">
-              <WeekendIcon />
+              <WeekendIcon className="work1" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>
+          <TimelineContent className="work">
             <Paper elevation={3} className={classes.paper}>
               <Typography variant="h6" component="h1">
                 Relax

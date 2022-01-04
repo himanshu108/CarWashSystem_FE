@@ -62,6 +62,19 @@ function Navbar() {
         >
           LOGIN
         </NavLink>
+
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/member_login"
+        >
+          WASHER
+        </NavLink>
+        <NavLink
+          className={`nav__link ${show && "nav__linkscroll"}`}
+          to="/member_login"
+        >
+          ADMIN
+        </NavLink>
       </div>
     </nav>
   );
